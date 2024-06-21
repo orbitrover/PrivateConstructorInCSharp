@@ -1,5 +1,8 @@
 # Private Constructor In C#
 Private Constructor in C# with example
+In C#, when the constructor is created by using the Private Access Specifier, then it is called a Private Constructor. 
+When a class contains a private constructor and if the class does not have any other Public Constructors, then you cannot create an object for the class outside of the class. 
+But we can create objects for the class within the same class.
 
     using System;
     using System.Linq;
