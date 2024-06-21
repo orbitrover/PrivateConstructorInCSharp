@@ -22,7 +22,10 @@ public class Program
         };
         
         // Here we cannot create an instance of a class that has a private constructor.
-        // PaginatedList<Employee> pagination = new PaginatedList<Employee>(employees.AsQueryable(), 2, 5);
+        // If you uncomment the following statement, it will generate
+        // an error because the constructor is inaccessible:
+        // PaginatedList<Employee> pagination = new PaginatedList<Employee>(employees.AsQueryable(), 2, 5); // Error 
+        
         // However, we can use this class as a static class if it contains any static methods.
         var pages = await PaginatedList<Employee>.CreateAsync(employees.AsQueryable(), 1, 5);
         
