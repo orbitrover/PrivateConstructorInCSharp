@@ -27,7 +27,7 @@ Private Constructor in C# with example
             // Here we cannot create an instance of a class that has a private constructor.
             // PaginatedList<Employee> pagination = new PaginatedList<Employee>(employees.AsQueryable(), 2, 5);
             // However, we can use this class as a static class if it contains any static methods.
-            var pages = await PaginatedList<Employee>.CreateAsync(employees.AsQueryable(), 1, 5);
+            var pages = await PaginatedList<Employee>.CreateAsync(employees.AsEnumerable(), 1, 5);
             
             foreach (var employee in pages)
                 Console.WriteLine($"Id: {employee.Id} & Name: {employee.Name}");
